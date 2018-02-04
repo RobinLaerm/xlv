@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xitaso.Logging.Viewer.App", "Xitaso.Logging.Viewer.App\Xitaso.Logging.Viewer.App.csproj", "{914D002A-B64D-4FBF-87EE-F8EE1B8B046F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xitaso.Logging.MessageGenerator", "Xitaso.Logging.MessageGenerator\Xitaso.Logging.MessageGenerator.csproj", "{A36A221E-4AB7-45F9-B9A5-F19A92785F39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{914D002A-B64D-4FBF-87EE-F8EE1B8B046F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914D002A-B64D-4FBF-87EE-F8EE1B8B046F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914D002A-B64D-4FBF-87EE-F8EE1B8B046F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914D002A-B64D-4FBF-87EE-F8EE1B8B046F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36A221E-4AB7-45F9-B9A5-F19A92785F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36A221E-4AB7-45F9-B9A5-F19A92785F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36A221E-4AB7-45F9-B9A5-F19A92785F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36A221E-4AB7-45F9-B9A5-F19A92785F39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {871D9101-9254-43AE-AA14-492A12017F1F}
+	EndGlobalSection
+EndGlobal

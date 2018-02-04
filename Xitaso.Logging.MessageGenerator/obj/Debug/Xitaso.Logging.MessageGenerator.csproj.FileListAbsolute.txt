@@ -1,0 +1,10 @@
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\bin\Debug\NLog.config
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\bin\Debug\Xitaso.Logging.MessageGenerator.exe.config
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\bin\Debug\Xitaso.Logging.MessageGenerator.exe
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\bin\Debug\Xitaso.Logging.MessageGenerator.pdb
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\bin\Debug\NLog.dll
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\bin\Debug\NLog.xml
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\obj\Debug\Xitaso.Logging.MessageGenerator.csprojResolveAssemblyReference.cache
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\obj\Debug\Xitaso.Logging.MessageGenerator.csproj.CoreCompileInputs.cache
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\obj\Debug\Xitaso.Logging.MessageGenerator.exe
+D:\Development\XitasoLogViewer\Xitaso.Logging.MessageGenerator\obj\Debug\Xitaso.Logging.MessageGenerator.pdb
