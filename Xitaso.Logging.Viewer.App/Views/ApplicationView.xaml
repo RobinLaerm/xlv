@@ -6,8 +6,29 @@
              xmlns:local="clr-namespace:Xitaso.Logging.Viewer.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel>
-        <Label Content="{Binding Title}"></Label>
-        <Label x:Name="Version"></Label>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="800"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0">
+            <Label Content="{Binding Title}"></Label>
+            <Label x:Name="Version"></Label>
+        </StackPanel>
+        
+        <ListView Grid.Row="1" ItemsSource="{Binding LogEntries}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Counter" DisplayMemberBinding="{Binding Counter}"/>
+                    <GridViewColumn Header="DateTime" DisplayMemberBinding="{Binding CreationTime}"/>
+                    <GridViewColumn Header="MachineName" DisplayMemberBinding="{Binding MachineName}"/>
+                    <GridViewColumn Header="LoggerName" DisplayMemberBinding="{Binding LoggerName}"/>
+                    <GridViewColumn Header="LogLevel" DisplayMemberBinding="{Binding LogLevel}"/>
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+    </Grid>
 </UserControl>

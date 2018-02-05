@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Xitaso.Logging.MessageGenerator
@@ -25,6 +26,7 @@ namespace Xitaso.Logging.MessageGenerator
                 _logger.Warn("Warning message.");
                 _logger.Error("Error message.");
                 _logger.Fatal("Fatal message.");
+                Thread.Sleep(10);
             }
         }
 
