@@ -4,9 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Xitaso.Logging.Viewer.App.Views"
+             xmlns:converter="clr-namespace:Xitaso.Logging.Viewer.App.Converter"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
+    <UserControl.Resources>
+        <converter:StringToBrushConverter x:Key="stringToBrushConverter"/>
+    </UserControl.Resources>
+    <DockPanel>
+        <ContentControl DockPanel.Dock="Right" x:Name="LogLevelFilter"></ContentControl>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="800"></RowDefinition>
@@ -20,15 +26,22 @@
         <ListView Grid.Row="1" ItemsSource="{Binding LogEntries}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Counter" DisplayMemberBinding="{Binding Counter}"/>
-                    <GridViewColumn Header="DateTime" DisplayMemberBinding="{Binding CreationTime}"/>
-                    <GridViewColumn Header="MachineName" DisplayMemberBinding="{Binding MachineName}"/>
-                    <GridViewColumn Header="LoggerName" DisplayMemberBinding="{Binding LoggerName}"/>
-                    <GridViewColumn Header="LogLevel" DisplayMemberBinding="{Binding LogLevel}"/>
-                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Message}"/>
+                    <GridViewColumn Header="Counter" DisplayMemberBinding="{Binding LogEntry.Counter}"/>
+                    <GridViewColumn Header="DateTime" DisplayMemberBinding="{Binding LogEntry.CreationTime}"/>
+                    <GridViewColumn Header="MachineName" DisplayMemberBinding="{Binding LogEntry.MachineName}"/>
+                    <GridViewColumn Header="LoggerName" DisplayMemberBinding="{Binding LogEntry.LoggerName}"/>
+                        <GridViewColumn Header="LogLevel">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding LogEntry.LogLevel}" Background="{Binding BackgroundColorBrush, Mode=OneWay}" HorizontalContentAlignment="Stretch"></Label>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding LogEntry.Message}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         
     </Grid>
+    </DockPanel>
 </UserControl>
