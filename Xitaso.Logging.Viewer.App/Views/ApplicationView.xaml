@@ -11,38 +11,8 @@
         <converter:StringToBrushConverter x:Key="stringToBrushConverter"/>
     </UserControl.Resources>
     <DockPanel>
-        <ContentControl DockPanel.Dock="Left" x:Name="LogProviderList"/>
-        <ContentControl DockPanel.Dock="Right" x:Name="LogLevelFilter" />
-        <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="800"></RowDefinition>
-        </Grid.RowDefinitions>
-        
-        <StackPanel Grid.Row="0">
-            <Label Content="{Binding Title}"></Label>
-            <Label x:Name="Version"></Label>
-        </StackPanel>
-        
-        <ListView Grid.Row="1" ItemsSource="{Binding LogEntries}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Counter" DisplayMemberBinding="{Binding LogEntry.Counter}"/>
-                    <GridViewColumn Header="DateTime" DisplayMemberBinding="{Binding LogEntry.CreationTime}"/>
-                    <GridViewColumn Header="MachineName" DisplayMemberBinding="{Binding LogEntry.MachineName}"/>
-                    <GridViewColumn Header="LoggerName" DisplayMemberBinding="{Binding LogEntry.LoggerName}"/>
-                        <GridViewColumn Header="LogLevel">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Label Content="{Binding LogEntry.LogLevel}" Background="{Binding BackgroundColorBrush, Mode=OneWay}" HorizontalContentAlignment="Stretch"></Label>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding LogEntry.Message}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        
-    </Grid>
+        <ContentControl DockPanel.Dock="Left" x:Name="LogProviderListView"/>
+        <ContentControl DockPanel.Dock="Right" x:Name="LogLevelFilterView" />
+        <ContentControl x:Name="LogEntryViewerContainer" />
     </DockPanel>
 </UserControl>

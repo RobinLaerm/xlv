@@ -14,7 +14,8 @@ namespace Xitaso.Logging.Viewer.App.Provider
         public LogEntry ConvertFromString(string message)
         {
             var values = message.Split(SeparatorCharacter);
-            if (values.Length < 2) return null;
+            if (values.Length < 6) return new LogEntry() { Message = "Wrong message format!" };
+
             LogEntry entry = new LogEntry()
             {
                 Counter = Convert.ToInt32(values[0]),

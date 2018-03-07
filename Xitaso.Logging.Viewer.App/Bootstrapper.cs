@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Unity;
+using Xitaso.Logging.Viewer.App.Provider;
 using Xitaso.Logging.Viewer.App.ViewModels;
 
 namespace Xitaso.Logging.Viewer.App
@@ -28,11 +29,15 @@ namespace Xitaso.Logging.Viewer.App
         {
             base.Configure();
             _unityContainer = new UnityContainer();
-            _unityContainer.RegisterType<IWindowManager, WindowManager>();
-            _unityContainer.RegisterType<IEventAggregator, EventAggregator>();
+            _unityContainer.RegisterSingleton<IWindowManager, WindowManager>();
+            _unityContainer.RegisterSingleton<IEventAggregator, EventAggregator>();
             _unityContainer.RegisterType<ApplicationViewModel>();
-            _unityContainer.RegisterType<LogLevelFilterSettingViewModel>();
             _unityContainer.RegisterType<LogProviderListViewModel>();
+            _unityContainer.RegisterType<LogEntryViewerContainerViewModel>();
+            _unityContainer.RegisterType<LogEntryViewerViewModel>();
+            _unityContainer.RegisterType<LogLevelFilterSettingViewModel>();
+
+            _unityContainer.RegisterSingleton<ILogProviderService, LogProviderService>();
         }
 
         protected override object GetInstance(Type service, string key)
@@ -48,6 +53,12 @@ namespace Xitaso.Logging.Viewer.App
         protected override void BuildUp(object instance)
         {
             _unityContainer.BuildUp(instance);
+        }
+
+        protected override void OnExit(object sender, EventArgs e)
+        {
+            _unityContainer.Dispose();
+            base.OnExit(sender, e);
         }
     }
 }

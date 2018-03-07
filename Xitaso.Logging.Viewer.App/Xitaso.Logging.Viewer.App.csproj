@@ -59,25 +59,38 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Provider\Commands\CreateNewProviderCommand.cs" />
     <Compile Include="Converter\SafeColorConverter.cs" />
     <Compile Include="Converter\StringToBrushConverter.cs" />
     <Compile Include="Model\LogEntry.cs" />
+    <Compile Include="Provider\Commands\SelectProviderCommand.cs" />
     <Compile Include="Provider\ILogProvider.cs" />
+    <Compile Include="Provider\ILogProviderService.cs" />
     <Compile Include="Provider\LogFileMessageConverter.cs" />
     <Compile Include="Provider\LogFileProvider.cs" />
     <Compile Include="Model\LogLevelFilter.cs" />
     <Compile Include="Model\LogLevelFilterSetting.cs" />
+    <Compile Include="Provider\LogProviderService.cs" />
+    <Compile Include="Provider\Messages\LogProviderSelectionChangedMessage.cs" />
     <Compile Include="Utilities\LogFileListener.cs" />
     <Compile Include="ViewModels\ApplicationViewModel.cs" />
+    <Compile Include="ViewModels\LogEntryViewerContainerViewModel.cs" />
     <Compile Include="ViewModels\LogEntryViewModel.cs" />
     <Compile Include="ViewModels\LogLevelFilterSettingViewModel.cs" />
     <Compile Include="ViewModels\LogLevelFilterViewModel.cs" />
+    <Compile Include="ViewModels\LogEntryViewerViewModel.cs" />
     <Compile Include="ViewModels\LogProviderListViewModel.cs" />
     <Compile Include="Views\ApplicationView.xaml.cs">
       <DependentUpon>ApplicationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LogEntryViewerContainerView.xaml.cs">
+      <DependentUpon>LogEntryViewerContainerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LogLevelFilterView.xaml.cs">
       <DependentUpon>LogLevelFilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogEntryViewerView.xaml.cs">
+      <DependentUpon>LogEntryViewerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LogProviderListView.xaml.cs">
       <DependentUpon>LogProviderListView.xaml</DependentUpon>
@@ -125,7 +138,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LogEntryViewerContainerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LogLevelFilterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LogEntryViewerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,5 +155,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
