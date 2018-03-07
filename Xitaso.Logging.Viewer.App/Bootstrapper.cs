@@ -32,6 +32,7 @@ namespace Xitaso.Logging.Viewer.App
             _unityContainer.RegisterType<IEventAggregator, EventAggregator>();
             _unityContainer.RegisterType<ApplicationViewModel>();
             _unityContainer.RegisterType<LogLevelFilterSettingViewModel>();
+            _unityContainer.RegisterType<LogProviderListViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ using Xitaso.Logging.Viewer.App.Model;
 
 namespace Xitaso.Logging.Viewer.App.ViewModels
 {
-    public class LogLevelFilterSettingViewModel
+    public class LogLevelFilterSettingViewModel : PropertyChangedBase
     {
         private readonly LogLevelFilterSetting _filterSetting;
 

@@ -13,34 +13,43 @@ using Xitaso.Logging.Viewer.App.Utilities;
 
 namespace Xitaso.Logging.Viewer.App.ViewModels
 {
-    public class ApplicationViewModel : Conductor<IScreen>
+    public class ApplicationViewModel : Conductor<IScreen>, IDisposable
     {
         public ApplicationViewModel()
         {
             Title = "Xitaso Log Viewer";
-            Version = "0.0.1";
+            Version = "1.0.0";
             DisplayName = $"{Title} v{Version}";
+            LogProviderList = new LogProviderListViewModel();
             LogEntries = new BindableCollection<LogEntryViewModel>();
             LogLevelFilter = new LogLevelFilterViewModel();
 
             LogFileProvider provider = new LogFileProvider();
             provider.FilePath = @"C:\Temp\logs\logfile.txt";
-            provider.NewEntries += On_FileListener_NewEntries;
+            provider.NewEntriesAvailable += On_FileListener_NewEntriesAvailable;
             provider.Start();
+            LogProviderList.LogProviders.Add(provider);
+        }
+
+        public void Dispose()
+        {
         }
 
         public string Title { get; set; }
 
         public string Version { get; set; }
 
+        public LogProviderListViewModel LogProviderList { get; }
+
         public BindableCollection<LogEntryViewModel> LogEntries { get; }
 
         public LogLevelFilterViewModel LogLevelFilter { get; }
 
-        private void On_FileListener_NewEntries(List<LogEntry> newEntries)
+        private void On_FileListener_NewEntriesAvailable(ILogProvider logProvider)
         {
             try
             {
+                var newEntries = logProvider.GetNewEntries();
                 Execute.BeginOnUIThread(() => AddNewEntries(newEntries));
             }
             catch (Exception ex)
@@ -70,6 +79,5 @@ namespace Xitaso.Logging.Viewer.App.ViewModels
             }
             return logEntry;
         }
-
     }
 }

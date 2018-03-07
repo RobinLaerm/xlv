@@ -62,8 +62,9 @@
     <Compile Include="Converter\SafeColorConverter.cs" />
     <Compile Include="Converter\StringToBrushConverter.cs" />
     <Compile Include="Model\LogEntry.cs" />
-    <Compile Include="Model\ILogProvider.cs" />
-    <Compile Include="Model\LogFileProvider.cs" />
+    <Compile Include="Provider\ILogProvider.cs" />
+    <Compile Include="Provider\LogFileMessageConverter.cs" />
+    <Compile Include="Provider\LogFileProvider.cs" />
     <Compile Include="Model\LogLevelFilter.cs" />
     <Compile Include="Model\LogLevelFilterSetting.cs" />
     <Compile Include="Utilities\LogFileListener.cs" />
@@ -71,11 +72,15 @@
     <Compile Include="ViewModels\LogEntryViewModel.cs" />
     <Compile Include="ViewModels\LogLevelFilterSettingViewModel.cs" />
     <Compile Include="ViewModels\LogLevelFilterViewModel.cs" />
+    <Compile Include="ViewModels\LogProviderListViewModel.cs" />
     <Compile Include="Views\ApplicationView.xaml.cs">
       <DependentUpon>ApplicationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LogLevelFilterView.xaml.cs">
       <DependentUpon>LogLevelFilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogProviderListView.xaml.cs">
+      <DependentUpon>LogProviderListView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LogLevelFilterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LogProviderListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

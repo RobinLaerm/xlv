@@ -11,7 +11,8 @@
         <converter:StringToBrushConverter x:Key="stringToBrushConverter"/>
     </UserControl.Resources>
     <DockPanel>
-        <ContentControl DockPanel.Dock="Right" x:Name="LogLevelFilter"></ContentControl>
+        <ContentControl DockPanel.Dock="Left" x:Name="LogProviderList"/>
+        <ContentControl DockPanel.Dock="Right" x:Name="LogLevelFilter" />
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
