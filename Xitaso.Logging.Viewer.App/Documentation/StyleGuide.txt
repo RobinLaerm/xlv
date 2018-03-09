@@ -1,0 +1,49 @@
+﻿https://github.com/MahApps/MahApps.Metro/tree/develop/src/MahApps.Metro/MahApps.Metro/Styles
+
+Schriftarten
+Antenna Bold
+Antenna Medium
+Antenna Regular
+Antenna Ligth
+Antenna Thin
+
+In Webanwendungen wird der Freefont Open Sans eingesetzt
+In Office: Verdana
+
+Fließtext: Antenna Regular
+Überschriften und Hervorhebungen: Antenna Bold
+
+Primärfarben
+Pantone 7546
+RGB: 94/107/122
+Hex: #5e6b7a
+
+Pantone 7546 75%
+RGB: 127/137/151
+Hex: #7f8997
+
+Pantone 7546 50%
+RGB: 157/165/177
+Hex: #9da5b1
+
+Pantone 7546 25%
+RGB: 207/165/177
+Hex: #cfd3da
+
+
+Sekundärfarben
+Pantone 188
+RGB: 96/40/51
+Hex: #602833
+
+Pantone 188 75%
+RGB: 126/79/84
+Hex: #7e4f54
+
+Pantone 188 50%
+RGB: 162/129/130
+Hex: #a28182
+
+Pantone 188 25%
+RGB: 205/188/187
+Hex: #cdbcbb

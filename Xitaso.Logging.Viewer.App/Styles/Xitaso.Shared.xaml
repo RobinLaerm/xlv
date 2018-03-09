@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Xitaso.Logging.Viewer.App.Styles"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <SolidColorBrush x:Key="Primary100" Color="#5e6b7a" />
+    <SolidColorBrush x:Key="Primary75" Color="#7f8997" />
+    <SolidColorBrush x:Key="Primary50" Color="#9da5b1" />
+    <SolidColorBrush x:Key="Primary25" Color="#cfd3da" />
+
+    <SolidColorBrush x:Key="Secondary100" Color="#602833" />
+    <SolidColorBrush x:Key="Secondary75" Color="#7e4f54" />
+    <SolidColorBrush x:Key="Secondary50" Color="#a28182" />
+    <SolidColorBrush x:Key="Secondary25" Color="#cdbcbb" />
+
+    <SolidColorBrush x:Key="BlackBrush" Color="#000000" />
+    <SolidColorBrush x:Key="WhiteBrush" Color="#000000" />
+    <SolidColorBrush x:Key="TextBrush" Color="#000000" />
+    
+
+    <FontFamily x:Key="MainFont"></FontFamily>
+
+    <system:Double x:Key="FontSizeHeadline" />
+    
+</ResourceDictionary>

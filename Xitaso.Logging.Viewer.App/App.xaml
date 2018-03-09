@@ -8,6 +8,8 @@
                 <ResourceDictionary>
                     <local:Bootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
+                <ResourceDictionary Source="styles/Xitaso.Shared.xaml" />
+                <ResourceDictionary Source="styles/Xitaso.Standard.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
